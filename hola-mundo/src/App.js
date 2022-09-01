@@ -9,12 +9,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         {/*Componente propio Greeting*/}
-        {/*<TaskListComponent></TaskListComponent>*/ }
+        {<TaskListComponent></TaskListComponent>}
   
-
-        <ContactListComponent></ContactListComponent>
+ 
+        {/* <ContactListComponent></ContactListComponent> */}
       </header>
     </div>
   );
