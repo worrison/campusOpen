@@ -3,6 +3,7 @@ import './App.css';
 import Greeting from './components/pure/greeting';
 import TaskListComponent from './components/container/task_list';
 import ContactListComponent from './components/container/contact_list';
+import Father from './components/container/father';
 
 
 function App() {
@@ -10,7 +11,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         {/*Componente propio Greeting*/}
-        {<TaskListComponent></TaskListComponent>}
+        {/* {<TaskListComponent></TaskListComponent>} */}
+        {/**Gestion de eventos */}
+        {<Father></Father>}
   
  
         {/* <ContactListComponent></ContactListComponent> */}
