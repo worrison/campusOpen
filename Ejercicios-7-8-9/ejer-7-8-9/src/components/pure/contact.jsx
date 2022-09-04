@@ -1,10 +1,21 @@
 import React from 'react';
 
-const Contact = () => {
+
+const Contact = ({posicion,nombre,telefono,remove,contacto}) => {
+
+
     return (
-        <div>
-            
-        </div>
+      
+                                <tr>
+                                    <td>{posicion}</td>
+                                    <td>{nombre}</td>
+                                    <td>{telefono}</td>
+                                    <td>
+                                    <i className='bi-trash' style={ {color: 'tomato'}} onClick={() => remove(contacto)}></i>
+                                    </td>
+                                </tr>
+
+        
     );
 }
 
