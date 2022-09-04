@@ -1,15 +1,15 @@
 import React from 'react';
 
 
-const Contact = ({posicion,nombre,telefono,remove,contacto}) => {
+const Contact = ({conectado,nombre,telefono,remove,contacto}) => {
 
 
     return (
       
                                 <tr>
-                                    <td>{posicion}</td>
-                                    <td>{nombre}</td>
-                                    <td>{telefono}</td>
+                                    <td>{contacto.conectado?'SI':'NO'}</td>
+                                    <td>{contacto.nombre}</td>
+                                    <td>{contacto.telefono}</td>
                                     <td>
                                     <i className='bi-trash' style={ {color: 'tomato'}} onClick={() => remove(contacto)}></i>
                                     </td>

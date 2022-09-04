@@ -1,12 +1,13 @@
 import React,{useState} from 'react';
 import Table from 'react-bootstrap/Table';
 import ContactComponent from '../pure/contact'
+import AddContact from '../pure/forms/AddContact'
 
 const ListContact = () => {
 
-    const defaultContact1={posicion:'1',nombre:'victor',telefono:'666366003'}
-    const defaultContact2={posicion:'2',nombre:'Ana',telefono:'234234'}
-    const defaultContact3={posicion:'3',nombre:'Alicia',telefono:'111111'}
+    const defaultContact1={conectado:true,nombre:'victor',telefono:'666366003'}
+    const defaultContact2={conectado:true,nombre:'Ana',telefono:'234234'}
+    const defaultContact3={conectado:false,nombre:'Alicia',telefono:'111111'}
 
     const [contactos, setContactos] = useState([defaultContact1,defaultContact2,defaultContact3]);
 
@@ -16,13 +17,20 @@ const ListContact = () => {
         tempContactos.splice(index,1);
         setContactos(tempContactos);
     }
+
+    function newContact(contacto){
+        const tempContactos = [...contactos];
+        console.log(tempContactos);
+        tempContactos.push(contacto);
+        setContactos(tempContactos);
+    }
     return (
         <div>
             <h1>Agenda Contactos</h1>
                 <Table striped bordered hover size="sm">
                             <thead>
                                 <tr>
-                                <th>#</th>
+                                <th>Conectado</th>
                                 <th>Nombre</th>
                                 <th>teléfono</th>
                                 <th>Acción</th>
@@ -34,9 +42,9 @@ const ListContact = () => {
                                          return (
                                             <ContactComponent 
                                                     key={index} 
-                                                    posicion={contacto.posicion}
-                                                    nombre={contacto.nombre}
-                                                    telefono={contacto.telefono}
+                                                    // conectado={contacto.conectado}
+                                                    // nombre={contacto.nombre}
+                                                    // telefono={contacto.telefono}
                                                     remove = {deleteContact}
                                                     contacto={contacto}>
                                             </ContactComponent>                      
@@ -48,7 +56,7 @@ const ListContact = () => {
      
                  </Table>
 
-
+                <AddContact add={newContact}></AddContact>
         </div>
     );
 }
