@@ -5,13 +5,14 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import AppRouter1 from './AppRouter1';
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}<AppRouter1/>
   </React.StrictMode>
 );
 
