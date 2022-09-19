@@ -14,7 +14,6 @@ function AppRouter1() {
                 <Link to='/about'>| ABOUT |</Link>
                 <Link to='/faqs'>| FAQs |</Link>
                 <Link to='/404'>| Ruta no existe |</Link>
-
             </aside>
 
             <main>
